@@ -77,7 +77,7 @@ const createaccountEmail = (user) =>
         expiresIn: process.env.JWT_EXPIRES,
       }
     );
-    const URL_value = `https://lasttestfe.onrender.com/${token}`;
+    const URL_value = `https://lasttestfe.onrender.com/signin/${token}`;
     const pathFile = path_1.default.join(
       __dirname,
       "../views/createaccount.ejs"
