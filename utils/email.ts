@@ -32,7 +32,7 @@ export const createaccountEmail = async (user: any) => {
   const token = jwt.sign({ id: user?._id }, process.env.JWT_SECRET as string, {
     expiresIn: process.env.JWT_EXPIRES,
   });
-  const URL_value = `https://lasttestfe.onrender.com/signin/${token}`;
+  const URL_value = `https://lasttestfe.onrender.com/${token}`;
 
   const pathFile = path.join(__dirname, "../views/createaccount.ejs");
   const html = await ejs.renderFile(pathFile, {
